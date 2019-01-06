@@ -8,8 +8,10 @@
     <title>@ViewBag.Title</title>
 </head>
 <body>
-    <div>
-        @RenderBody()
-    </div>
+    <div class="container body-content"> <!--START <div> for CSS bootstrap-->
+        <div class="row">
+            @RenderBody()
+        </div>
+    </div> <!--End </div> for CSS bootstrap-->
 </body>
 </html>
