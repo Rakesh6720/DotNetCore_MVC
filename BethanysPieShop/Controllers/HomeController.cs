@@ -23,7 +23,13 @@ namespace BethanysPieShop.Controllers
         // GET: /<controller>/
         public IActionResult Index()
         {
-            return View();
+            ViewBag.Title = "Pie Overview";
+
+            var pies = _pieRepository
+                        .GetAllPies()
+                        .OrderBy(p => p.Name);
+
+            return View(pies);
         }
     }
 }
